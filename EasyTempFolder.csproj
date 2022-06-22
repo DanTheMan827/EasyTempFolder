@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netcoreapp1.0;netcoreapp1.1;net20;net35;net46;</TargetFrameworks>
+    <RootNamespace>DanTheMan827</RootNamespace>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>DanTheMan827.$(AssemblyName)</PackageId>
+    <Authors>DanTheMan827</Authors>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageTags>temporary folder;temp folder</PackageTags>
+    <RepositoryUrl>https://github.com/DanTheMan827/EasyTempFolder.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/DanTheMan827/EasyTempFolder</PackageProjectUrl>
+    <Copyright>Copyright ©$([System.DateTime]::Now.ToString('yyyy')) Daniel Radtke</Copyright>
+    <Description>EasyTempFolder is a class intended to make creation and deletion of temporary folders easier.</Description>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
+    <Company />
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <SignAssembly>False</SignAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="readme.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="readme.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include=".github\workflows\dotnet-build.yml" />
+    <None Include=".github\workflows\nuget.yml" />
+  </ItemGroup>
+
+</Project>
